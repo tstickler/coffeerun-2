@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Payment</title>
+  </head>
+
+	<body>
+		<form data-payment="payment">
+			<h1>Payment Form</h1>
+			<p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+
+			<section>
+				<h2>Contact Information</h2>
+
+				<fieldset>
+					<legend>Title</legend>
+					<ul>
+						<li>
+							<label for="title_1">
+								<input type="radio" id="title_1" name="title" value="M.">
+								Mister
+							</label>
+						</li>
+						<li>
+							<label for="title_2">
+								<input type="radio" id="title_2" name="title" value="Ms.">
+								Miss
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+
+			<p>
+				<label for="name">
+					<span>Name: </span>
+					<strong><abbr title="required">*</abbr></strong>
+				</label>
+				<input type="text" id="name" name="username">
+			</p>
+
+			<p>
+				<label for="mail">
+					<span>E-mail: </span>
+					<strong><abbr title="required">*</abbr></strong>
+				</label>
+				<input type="email" name="usermail" id="mail">
+			</p>
+
+			<p>
+				<label for="pwd">
+					<span>Password: </span>
+					<strong><abbr title="requried">*</abbr></strong>
+				</label>
+				<input type="password" id="pwd" name="password">
+			</p>
+
+			</section>
+
+			<section>
+				<h2>Payment Information</h2>
+				<p>
+					<label for="card">
+						<span> Card Type:</span>
+					</label>
+					<select id="card" name="usercard">
+						<option value="visa">Visa</option>
+						<option value="mc">Mastercard</option>
+						<option value="amex">American Express</option>
+						<option value="disc">Discover</option>
+					</select>
+				</p>
+
+				<p>
+					<label for="number">
+						<span>Card number:</span>
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+					<input type="text" id="number" name="cardnumber">
+				</p>
+
+				<p>
+					<label for="date">
+						<span>Expiration Date:</span>
+						<strong><abbr title="required">*</abbr></strong>
+					</label>
+					<em>formatted as mm/yy</em>
+					<input type="text" id="date" name="expiration">
+				</p>
+			</section>
+
+			<p><button type="submit">Validate the payment</button></p>
+
+		</form>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+		<script src="scripts/formhandler.js" charset="utf-8"></script>
+		<script src="scripts/main.js" charset="utf-8"></script>
+
+
+	</body>
+
+</html>
